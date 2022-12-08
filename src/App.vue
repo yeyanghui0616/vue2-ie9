@@ -7,7 +7,17 @@
     <router-view/>
   </div>
 </template>
-
+<script>
+import iePlaceholders from './utils/ie-placeholder'
+export default {
+  mounted() {
+    // 解决ie9 input输入框placeholder不显示问题
+    if (this.$browerVersion) {
+      iePlaceholders()
+    }
+  },
+}
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <img src="../assets/logo.png">
-    <el-button>111</el-button>
+    <div style="display:flex">
+      <div>aaa</div>
+      <div>bb</div>
+    </div>
+    <el-button  @click="clickFn">111</el-button>
+    <el-input v-model="input" placeholder="请输入内容"></el-input>
   </div>
 </template>
 
@@ -13,6 +18,17 @@ export default {
   name: 'home',
   components: {
     HelloWorld
-  }
+  },
+  data() {
+    return {
+      input: ''
+    }
+  },
+  methods: {
+    clickFn(){
+      const a = '11'
+      console.log(a)
+    }
+  },
 }
 </script>
